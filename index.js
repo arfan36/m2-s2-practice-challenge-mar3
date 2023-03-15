@@ -1,7 +1,19 @@
-const http = require("http");
+// core module
+// const http = require("http");
 
-const server = http.createServer((req, res) => {
-	console.log(`Server is running`);
-});
+// third party module -> underscore
+const _ = require("underscore");
 
-server.listen(5000);
+// const server = http.createServer(function (req, res) {
+// 	// console.log(`server is running`);
+// });
+
+// server.listen(5000);
+
+const stooges = [
+	{ name: "moe", age: 40 },
+	{ name: "larry", age: 50 },
+	{ name: "curly", age: 60 },
+];
+const result = _.pluck(stooges, "age");
+console.log("🚀 ~ result:", result);
