@@ -1,19 +1,15 @@
-// core module
-// const http = require("http");
+// local module
+const other = require("./other");
+// console.log("🚀 ~ other:", other);
 
-// third party module -> underscore
-const _ = require("underscore");
+// const res = other.subtract(5, 4);
+// console.log("🚀 ~ res:", res);
 
-// const server = http.createServer(function (req, res) {
-// 	// console.log(`server is running`);
-// });
-
-// server.listen(5000);
-
-const stooges = [
-	{ name: "moe", age: 40 },
-	{ name: "larry", age: 50 },
-	{ name: "curly", age: 60 },
-];
-const result = _.pluck(stooges, "age");
-console.log("🚀 ~ result:", result);
+const http = require("http");
+const server = http.createServer((req, res) => {
+	res.end("Welcome to Full Stack Development");
+});
+const PORT = 5000;
+server.listen(PORT);
+// console.log("🚀 ~ http:", http);
+console.log(`server is running at ${PORT}`);
